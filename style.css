@@ -2,7 +2,11 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
   background-color: bisque;
+  font-family: 'Zilla Slab', serif;
 }
 
 #flex-wrapper {
@@ -13,14 +17,30 @@ html, body {
 }
 
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80px;
 }
 
+nav a {
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  margin: 0 1em;
+  border-radius: 0.1em;
+  background: #FFF5;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #FFFA;
+}
+
 #title {
-  font-family: 'Zilla Slab', serif;
   font-size: 4em;
   width: fit-content;
-  padding: 0.25em;
+  padding: 0.25em 0.35em;
   margin: 0 auto 1em auto;
   border-radius: 0.1em;
   background: #FFF5;
