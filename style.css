@@ -1,0 +1,31 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+}
+
+#flex-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  height: 80px;
+}
+
+#title {
+  font-family: 'Zilla Slab', serif;
+  font-size: 4em;
+  width: fit-content;
+  padding: 0.25em;
+  margin: 0 auto 1em auto;
+  border-radius: 0.1em;
+  background: #FFF5;
+}
+
+footer {
+  height: 80px;
+}
