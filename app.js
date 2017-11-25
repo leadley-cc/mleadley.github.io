@@ -9,8 +9,12 @@ const app = () => {
 
   const cellSize = 80
 
-  const colourA = [255, 228, 196]
-  const colourB = [164, 221, 237]
+  const palettes = [
+    [ [255, 228, 196], [164, 221, 237] ],
+    [ [255, 225, 225], [255, 157, 157] ],
+    [ [174, 184, 248], [238, 184, 248] ]
+  ]
+  const palette = palettes[ Math.floor(Math.random() * palettes.length) ]
 
   const generatePoints = () => {
     const cellCountX = Math.floor(width / cellSize + 4)
@@ -34,9 +38,9 @@ const app = () => {
 
   const colourLookup = (position) => {
     const colour = [
-      Math.round(position * (colourA[0] - colourB[0]) + colourB[0]),
-      Math.round(position * (colourA[1] - colourB[1]) + colourB[1]),
-      Math.round(position * (colourA[2] - colourB[2]) + colourB[2])
+      Math.round(position * (palette[0][0] - palette[1][0]) + palette[1][0]),
+      Math.round(position * (palette[0][1] - palette[1][1]) + palette[1][1]),
+      Math.round(position * (palette[0][2] - palette[1][2]) + palette[1][2])
     ]
     return `rgb(${colour[0]},${colour[1]},${colour[2]})`
   }
